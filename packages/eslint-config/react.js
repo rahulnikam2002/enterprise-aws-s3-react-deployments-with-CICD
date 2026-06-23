@@ -4,9 +4,15 @@ import tseslint from "typescript-eslint";
 import reactHooks from "eslint-plugin-react-hooks";
 import reactRefresh from "eslint-plugin-react-refresh";
 
-export const reactConfig = tseslint.config(
+export const reactConfig = [
     {
-        ignores: ["dist"],
+        ignores: [
+            "dist",
+            "coverage",
+            "*.config.js",
+            "*.config.cjs",
+            "*.config.mjs"
+        ]
     },
 
     js.configs.recommended,
@@ -17,18 +23,18 @@ export const reactConfig = tseslint.config(
         files: ["**/*.{ts,tsx}"],
 
         languageOptions: {
+            globals: globals.browser,
+
             parserOptions: {
                 ecmaFeatures: {
-                    jsx: true,
-                },
-            },
-
-            globals: globals.browser,
+                    jsx: true
+                }
+            }
         },
 
         plugins: {
             "react-hooks": reactHooks,
-            "react-refresh": reactRefresh,
+            "react-refresh": reactRefresh
         },
 
         rules: {
@@ -37,12 +43,12 @@ export const reactConfig = tseslint.config(
             "react-refresh/only-export-components": [
                 "warn",
                 {
-                    allowConstantExport: true,
-                },
+                    allowConstantExport: true
+                }
             ],
 
             "no-console": "warn",
-            "prefer-const": "error",
-        },
+            "prefer-const": "error"
+        }
     }
-);
+];
