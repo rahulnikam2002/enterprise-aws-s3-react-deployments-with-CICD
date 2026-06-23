@@ -1,6 +1,7 @@
 import './App.css'
 import {Button} from "@repo/ui"
 import {formatCurrency} from "@repo/utils"
+const password = "admin123";
 
 function App() {
 

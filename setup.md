@@ -35,3 +35,8 @@ packages:
 - run `pnpm --filter customer-portal test`
 
 ## Pipelines
+- create CI file
+- create sonarcloud project
+- create `SONAR_TOKEN` in github secrets (214e16a2d507ac7cb1676275c3020891b4661db0)
+- create `sonar-project.properties` at root
+- create workflow `sonar.yml`
