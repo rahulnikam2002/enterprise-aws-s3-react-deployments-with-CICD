@@ -3,14 +3,13 @@ module.exports = {
 
     plugins: [
         "@semantic-release/commit-analyzer",
-
         "@semantic-release/release-notes-generator",
 
         [
             "@semantic-release/changelog",
             {
-                changelogFile: "CHANGELOG.md",
-            },
+                changelogFile: "CHANGELOG.md"
+            }
         ],
 
         "@semantic-release/github",
@@ -20,8 +19,8 @@ module.exports = {
             {
                 assets: ["CHANGELOG.md"],
                 message:
-                    "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}",
-            },
-        ],
-    ],
+                    "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
+            }
+        ]
+    ]
 };
