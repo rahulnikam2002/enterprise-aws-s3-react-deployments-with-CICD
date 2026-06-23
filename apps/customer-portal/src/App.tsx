@@ -9,6 +9,7 @@ function App() {
     <>
       <section>
         <Button onClick={() => alert(formatCurrency(12345))} />
+        <p>{password}</p>
       </section>
     </>
   )
