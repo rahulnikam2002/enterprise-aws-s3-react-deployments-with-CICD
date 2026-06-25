@@ -66,3 +66,17 @@ Read and write permissions
 
 is enabled.
 ```
+## AWS setup
+- Create IAM and give access to `AmazonS3FullAccess` `CloudFrontFullAccess`
+- navigate to user -> security cred -> create access key -> `Application running outside AWS`
+- Create S3 bucket
+- go to cloudfront
+- set error pages for 403 and 404 with custom error and path as /index.html
+- add githup secrets
+```bash
+AWS_ACCESS_KEY_ID
+AWS_SECRET_ACCESS_KEY
+AWS_REGION
+S3_BUCKET_NAME
+CLOUDFRONT_DISTRIBUTION_ID
+```
