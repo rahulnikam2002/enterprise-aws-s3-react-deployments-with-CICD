@@ -1,4 +1,4 @@
-name: PR Validation
+name: Pull Request
 
 on:
   pull_request:
@@ -10,6 +10,7 @@ permissions:
   pull-requests: read
 
 jobs:
-  validate:
-    uses: ./.github/workflows/validate.yml
+  quality-gates:
+    name: Quality Gates
+    uses: ./.github/workflows/quality-gates.yml
     secrets: inherit
